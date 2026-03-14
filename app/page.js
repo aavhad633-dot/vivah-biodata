@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <div style={{ minHeight: '100vh', background: '#FFFBEB', display: 'flex', flexDirection: 'column' }}>
@@ -37,7 +39,8 @@ export default function Home() {
               ))}
             </div>
 
-            <a href="/create" style={{
+            {/* FIXED LINK FOR GITHUB PAGES */}
+            <Link href="./create" style={{
               display: 'inline-block', background: '#F59E0B', color: '#fff',
               padding: '14px 40px', borderRadius: '10px', fontSize: '1.05rem',
               fontWeight: 'bold', textDecoration: 'none',
@@ -45,12 +48,11 @@ export default function Home() {
               transition: 'background 0.2s'
             }}>
               Create Your Biodata →
-            </a>
+            </Link>
           </div>
 
           {/* Right: Template preview cards */}
           <div style={{ position: 'relative', height: '420px' }}>
-
             {/* Classic card */}
             <div style={{
               position: 'absolute', top: '0', right: '0', width: '260px',
@@ -91,7 +93,6 @@ export default function Home() {
                 <div key={k} style={{ fontSize: '10px', color: '#aaa', marginBottom: '3px' }}>{k} <span style={{ color: '#fff' }}>{v}</span></div>
               ))}
             </div>
-
           </div>
         </div>
       </div>
